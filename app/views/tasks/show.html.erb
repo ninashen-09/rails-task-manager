@@ -1,14 +1,16 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<input type="checkbox" <%="checked" if @task.completed%>>This task has completed.
+<div class="m-2 p-2">
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+  <input type="checkbox" <%="checked" if @task.completed%>>This task has completed.
 
-<br>
-<br>
-<%=link_to "Edit this task", task_edit_path%>
-<br>
-<%= link_to "Delete this task",
-  task_destroy_path,
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-<br>
-<%=link_to "Back to homepage", tasks_path%>
+  <br>
+  <br>
+  <%=link_to "Edit this task", task_edit_path%>
+  <br>
+  <%= link_to "Delete this task",
+    task_destroy_path,
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  <br>
+  <%=link_to "Back to homepage", tasks_path%>
+</div>
